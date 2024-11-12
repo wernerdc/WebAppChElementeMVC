@@ -1,3 +1,6 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using WebAppChElementeMVC.Data;
 namespace WebAppChElementeMVC
 {
     public class Program
@@ -5,6 +8,8 @@ namespace WebAppChElementeMVC
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddDbContext<WebAppChElementeMVCContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("WebAppChElementeMVCContext") ?? throw new InvalidOperationException("Connection string 'WebAppChElementeMVCContext' not found.")));
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
@@ -28,7 +33,7 @@ namespace WebAppChElementeMVC
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Gruppen}/{action=Index}/{id?}");
 
             app.Run();
         }
