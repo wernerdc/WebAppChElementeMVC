@@ -95,9 +95,9 @@ namespace WebAppChElementeMVC.Controllers
             {
                 return NotFound();
             }
-            ViewData["GruppeId"] = new SelectList(_context.Set<Gruppe>(), "Id", "Id", element.GruppeId);
-            ViewData["PeriodeId"] = new SelectList(_context.Set<Periode>(), "Id", "Id", element.PeriodeId);
-            ViewData["ZustandId"] = new SelectList(_context.Set<Zustand>(), "Id", "Id", element.ZustandId);
+            ViewData["GruppeId"] = new SelectList(_context.Set<Gruppe>(), "Id", "Nummer", element.GruppeId);
+            ViewData["PeriodeId"] = new SelectList(_context.Set<Periode>(), "Id", "Nummer", element.PeriodeId);
+            ViewData["ZustandId"] = new SelectList(_context.Set<Zustand>(), "Id", "Bezeichnung", element.ZustandId);
             return View(element);
         }
 
@@ -106,7 +106,7 @@ namespace WebAppChElementeMVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("GruppeId,PeriodeId,ZustandId,Ordnungszahl,Symbol,Name")] Element element)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,GruppeId,PeriodeId,ZustandId,Ordnungszahl,Symbol,Name")] Element element)
         {
             if (id != element.Id)
             {

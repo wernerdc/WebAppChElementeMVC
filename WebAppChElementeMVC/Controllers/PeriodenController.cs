@@ -22,6 +22,7 @@ namespace WebAppChElementeMVC.Controllers
         // GET: Perioden
         public async Task<IActionResult> Index()
         {
+
             return View(await _context.Periode.ToListAsync());
         }
 
@@ -44,6 +45,7 @@ namespace WebAppChElementeMVC.Controllers
             {
                 return NotFound();
             }
+            //periode.SetName();
 
             return View(periode);
         }
@@ -61,6 +63,8 @@ namespace WebAppChElementeMVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nummer,Name")] Periode periode)
         {
+            periode.SetName();
+
             if (ModelState.IsValid)
             {
                 _context.Add(periode);
@@ -98,6 +102,7 @@ namespace WebAppChElementeMVC.Controllers
                 return NotFound();
             }
 
+            periode.SetName();
             if (ModelState.IsValid)
             {
                 try

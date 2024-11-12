@@ -37,7 +37,7 @@ namespace WebAppChElementeMVC.Controllers
                 .Include(e => e.Elemente)
                 .ThenInclude(p => p.Periode)
                 .Include(e => e.Elemente)
-                .ThenInclude(z  => z.Zustand)
+                .ThenInclude(z => z.Zustand)
                 .AsNoTracking()
                 .FirstOrDefaultAsync(m => m.Id == id);
                 if (gruppe == null)

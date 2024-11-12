@@ -57,7 +57,7 @@ namespace WebAppChElementeMVC.Migrations
 
                     b.HasIndex("ZustandId");
 
-                    b.ToTable("Element");
+                    b.ToTable("Element", (string)null);
                 });
 
             modelBuilder.Entity("WebAppChElementeMVC.Models.Gruppe", b =>
@@ -73,7 +73,7 @@ namespace WebAppChElementeMVC.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Gruppe");
+                    b.ToTable("Gruppe", (string)null);
                 });
 
             modelBuilder.Entity("WebAppChElementeMVC.Models.Periode", b =>
@@ -93,7 +93,7 @@ namespace WebAppChElementeMVC.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Periode");
+                    b.ToTable("Periode", (string)null);
                 });
 
             modelBuilder.Entity("WebAppChElementeMVC.Models.Zustand", b =>
@@ -110,7 +110,7 @@ namespace WebAppChElementeMVC.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Zustand");
+                    b.ToTable("Zustand", (string)null);
                 });
 
             modelBuilder.Entity("WebAppChElementeMVC.Models.Element", b =>
