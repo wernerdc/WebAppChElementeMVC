@@ -63,10 +63,10 @@ namespace WebAppChElementeMVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nummer,Name")] Periode periode)
         {
-            periode.SetName();
 
             if (ModelState.IsValid)
             {
+                periode.SetName();      // set name from nummer
                 _context.Add(periode);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -102,11 +102,11 @@ namespace WebAppChElementeMVC.Controllers
                 return NotFound();
             }
 
-            periode.SetName();
             if (ModelState.IsValid)
             {
                 try
                 {
+                    periode.SetName();      // set name from nummer
                     _context.Update(periode);
                     await _context.SaveChangesAsync();
                 }

@@ -52,7 +52,7 @@ namespace WebAppChElementeMVC.Controllers
         public IActionResult Create()
         {
             ViewData["GruppeId"] = new SelectList(_context.Set<Gruppe>(), "Id", "Nummer");
-            ViewData["PeriodeId"] = new SelectList(_context.Set<Periode>(), "Id", "Nummer");
+            ViewData["PeriodeId"] = new SelectList(_context.Set<Periode>(), "Id", "Name");
             ViewData["ZustandId"] = new SelectList(_context.Set<Zustand>(), "Id", "Bezeichnung");
             return View();
         }
@@ -71,7 +71,7 @@ namespace WebAppChElementeMVC.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["GruppeId"] = new SelectList(_context.Set<Gruppe>(), "Id", "Nummer", element.GruppeId);
-            ViewData["PeriodeId"] = new SelectList(_context.Set<Periode>(), "Id", "Nummer", element.PeriodeId);
+            ViewData["PeriodeId"] = new SelectList(_context.Set<Periode>(), "Id", "Name", element.PeriodeId);
             ViewData["ZustandId"] = new SelectList(_context.Set<Zustand>(), "Id", "Bezeichnung", element.ZustandId);
             return View(element);
         }
@@ -96,7 +96,7 @@ namespace WebAppChElementeMVC.Controllers
                 return NotFound();
             }
             ViewData["GruppeId"] = new SelectList(_context.Set<Gruppe>(), "Id", "Nummer", element.GruppeId);
-            ViewData["PeriodeId"] = new SelectList(_context.Set<Periode>(), "Id", "Nummer", element.PeriodeId);
+            ViewData["PeriodeId"] = new SelectList(_context.Set<Periode>(), "Id", "Name", element.PeriodeId);
             ViewData["ZustandId"] = new SelectList(_context.Set<Zustand>(), "Id", "Bezeichnung", element.ZustandId);
             return View(element);
         }
@@ -134,7 +134,7 @@ namespace WebAppChElementeMVC.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["GruppeId"] = new SelectList(_context.Set<Gruppe>(), "Id", "Nummer", element.GruppeId);
-            ViewData["PeriodeId"] = new SelectList(_context.Set<Periode>(), "Id", "Nummer", element.PeriodeId);
+            ViewData["PeriodeId"] = new SelectList(_context.Set<Periode>(), "Id", "Name", element.PeriodeId);
             ViewData["ZustandId"] = new SelectList(_context.Set<Zustand>(), "Id", "Bezeichnung", element.ZustandId);
             return View(element);
         }
