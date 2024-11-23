@@ -33,7 +33,7 @@ namespace WebAppChElementeMVC
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Gruppen}/{action=Index}/{id?}");
+                pattern: "{controller=Elemente}/{action=Index}/{id?}");
 
             app.Run();
         }

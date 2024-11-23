@@ -7,35 +7,43 @@
 <h1>Perioden</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+  <a class="btn bg-gradient-primary w-auto btn-sm me-2" asp-action="Create">Create New Periode</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nummer)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
+<table class="table align-items-center mb-0">
+  <thead>
+    <tr>
+      <th class="ps-2 text-uppercase text-secondary font-weight-bolder opacity-7">
+        @Html.DisplayNameFor(model => model.Nummer)
+      </th>
+      <th class="text-uppercase text-secondary text-m font-weight-bolder opacity-7 ps-2">
+        @Html.DisplayNameFor(model => model.Name)
+      </th>
+      <th class="text-secondary opacity-7"></th>
+    </tr>
+  </thead>
+  <tbody>
 @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nummer)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
+    <tr>
+      <td>
+        <h6 class="mb-0">
+          @Html.DisplayFor(modelItem => item.Nummer)
+        </h6>
+      </td>
+      <td>
+        <p class="font-weight-bold mb-0">
+          @Html.DisplayFor(modelItem => item.Name)
+        </p>
+      </td>
+      <td class="align-middle text-center">
+        <div class="row justify-space-between text-center py-2">
+          <div class="col-12 mx-auto">
+            <a class="btn btn-primary w-auto btn-sm me-2 mb-0" asp-action="Details" asp-route-id="@item.Id">Details</a>
+            <a class="btn btn-secondary w-auto btn-sm me-2 mb-0" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+            <a class="btn btn-secondary w-auto btn-sm me-2 mb-0" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+          </div>
+        </div>
+      </td>
+    </tr>
 }
-    </tbody>
+  </tbody>
 </table>

@@ -1,4 +1,4 @@
-html {
+/*html {
   font-size: 14px;
 }
 
@@ -19,4 +19,17 @@ html {
 
 body {
   margin-bottom: 60px;
+}*/
+
+/*.btn {
+    margin-bottom: 0rem;
+}
+
+.blur.card, .blur.card-body {
+    background-color: rgba(243, 239, 235, .9) !important;
+}
+*/
+
+.bg-my-brown {
+    background-color: #e1d5c9 !important;
 }
