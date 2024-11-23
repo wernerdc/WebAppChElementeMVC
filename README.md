@@ -1,6 +1,6 @@
 # WebApp mit ASP.NET core MVC + Material Kit 3 HTML/CSS Framework
 
-I try to implement different CSS/HTML layouts into the Basic ASP.NET core template in from Visual Studio
+I try to implement different CSS/HTML layouts into the Basic ASP.NET core template from Visual Studio.
 
 ## The branches are:
 
