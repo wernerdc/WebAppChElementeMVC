@@ -4,11 +4,17 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Perioden</h1>
+<div class="d-flex justify-content-between d-flex mt-2">
+  <div class="me-auto mt-1">
+    <h3>Perioden</h3>
+  </div>
+  <div class="my-0">
+    @* <p class="my-0"> *@
+      <a class="btn bg-gradient-primary w-auto btn-sm mt-2 mb-3" asp-action="Create">Create New</a>
+    @* </p> *@
+  </div>
+</div>
 
-<p>
-  <a class="btn bg-gradient-primary w-auto btn-sm me-2" asp-action="Create">Create New Periode</a>
-</p>
 <table class="table align-items-center mb-0">
   <thead>
     <tr>
@@ -47,3 +53,26 @@
 }
   </tbody>
 </table>
+
+@* <div class="border-bottom border-btm1 mt-2 mx-n3 px-3">
+  <h4>Edit Periode</h4>
+</div>
+<div class="row pt-3">
+  <div class="col-md-6">
+    <form asp-action="Edit">
+      <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+      <input type="hidden" asp-for="Id" />
+      <div class="form-group mb-3">
+        <div class="input-group input-group-static">
+          <label asp-for="Nummer">Nummer</label>
+          <input asp-for="Nummer" class="form-control pt-0" placeholder="0" type="number">
+        </div>
+        <span asp-validation-for="Nummer" class="text-primary text-xs"></span>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary me-2" />
+        <a asp-action="Index" class="btn btn-secondary me-2">Back to List</a>
+      </div>
+    </form>
+  </div>
+</div> *@
