@@ -21,14 +21,6 @@ body {
   margin-bottom: 60px;
 }*/
 
-/*.btn {
-    margin-bottom: 0rem;
-}
-
-.blur.card, .blur.card-body {
-    background-color: rgba(243, 239, 235, .9) !important;
-}
-*/
 
 .bg-my-brown {
     background-color: #e1d5c9 !important;
@@ -38,18 +30,60 @@ body {
     border-bottom: 1px solid #848d95 !important;
 }
 
-.blur.card, .blur.card-body {
-    background-color: rgba(219, 228, 234, 0.5) !important;
-    -webkit-backdrop-filter: saturate(100%) blur(24px);
-    backdrop-filter: saturate(100%) blur(24px);
+/* primary colors */
+.bg-gradient-primary { /*purple-blue dark*/
+    background-image: linear-gradient(195deg, #40B4EC 0%, #8B1BD8 100%);
+}
+/*.btn-primary:hover, .btn.bg-gradient-primary:hover {
+    background-color: #671ee9;
+    border-color: #841ee9;
+    box-shadow: 0 8px 14px -8px rgba(151, 30, 233, 0.3), 0 3px 18px 0 rgba(141, 30, 233, 0.1), 0 7px 8px -4px rgba(141, 30, 233, 0.18);
+}*/
+
+/* primary color blue  (purple original: #e91e63 ) */
+.btn-primary {
+    --bs-btn-color: #0a0a0a;
+    /*--bs-btn-bg: #5ea3c4;*/
+    --bs-btn-bg: #318dba;
+    --bs-btn-border-color: #318dba;
+    --bs-btn-hover-color: #0a0a0a;
+    --bs-btn-hover-bg: #318dba;
+    --bs-btn-hover-border-color: #318dba;
+    --bs-btn-focus-shadow-rgb: 200, 27, 86;
+    --bs-btn-active-color: #0a0a0a;
+    --bs-btn-active-bg: #318dba;
+    --bs-btn-active-border-color: #318dba;
+    --bs-btn-active-shadow: none;
+    --bs-btn-disabled-color: #0a0a0a;
+    --bs-btn-disabled-bg: #318dba;
+    --bs-btn-disabled-border-color: #318dba;
+}
+/* hover shadow color blue */
+.btn-primary:hover, .btn.bg-gradient-primary:hover {
+    background-color: #318dba;
+    border-color: #318dba;
+    box-shadow: 0 8px 14px -8px rgba(30, 138, 233, 0.3), 0 3px 18px 0 rgba(30, 138, 233, 0.1), 0 7px 8px -4px rgba(30, 157, 233, 0.18);
+}
+/* shadow color blue */
+.btn-primary, .btn.bg-gradient-primary {
+    box-shadow: 0 2px 2px 0 rgba(30, 128, 233, 0.1), 0 3px 1px -2px rgba(30, 147, 233, 0.18), 0 1px 5px 0 rgba(30, 147, 233, 0.15);
+}
+/* klicked-active */
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle,
+.btn.bg-gradient-primary:not(:disabled):not(.disabled).active,
+.btn.bg-gradient-primary:not(:disabled):not(.disabled):active,
+.show > .btn.bg-gradient-primary.dropdown-toggle {
+    color: color-(#318dba);
+    background-color: #318dba;
 }
 
-/*fix form white border around card*/
-.card {
-     border: 0px !important;
-}
-.shadow-blur {
-    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.07) !important;
+/* input and forms */
+.input-group.input-group-dynamic.is-focused label, .input-group.input-group-static.is-focused label {
+    /*color: #0a8bca;*/
+    color: #318dba;
+    /*font-weight: bolder;*/
 }
 
 /*fix for selected input line right edge*/
@@ -60,8 +94,41 @@ body {
 
 /*set input line when not selected (darker gray)*/
 .input-group.input-group-dynamic .form-control, .input-group.input-group-dynamic .form-control:focus, .input-group.input-group-static .form-control, .input-group.input-group-static .form-control:focus {
-    background-image: linear-gradient(0deg, #e91e63 2px, rgba(156, 39, 176, 0) 0), linear-gradient(0deg, #c8c8c8 1px, hsla(0, 0%, 82%, 0) 0);
+    background-image: linear-gradient(0deg, #318dba 2px, rgba(156, 39, 176, 0) 0), linear-gradient(0deg, #c8c8c8 1px, hsla(0, 0%, 82%, 0) 0);
     border-radius: 0 !important;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
+}
+
+
+/* tables */
+.table thead th {
+    padding: 0.5rem 0;
+}
+.table > :not(:last-child) > :last-child > * {
+    border-bottom-color: #a1b9ce;
+}
+.table {
+    --bs-table-border-color: #bdccd9;
+}
+
+/* blur + transparency */ 
+.blur.card, .blur.card-body {
+    background-color: rgba(219, 228, 234, 0.5) !important;
+    -webkit-backdrop-filter: saturate(100%) blur(24px);
+    backdrop-filter: saturate(100%) blur(24px);
+}
+.blur {
+    box-shadow: inset 0px 0px 2px rgba(254, 254, 254, 0.8);
+    -webkit-backdrop-filter: saturate(100%) blur(16px);
+    backdrop-filter: saturate(100%) blur(16px);
+    background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/*fix white border around card*/
+.card {
+     border: 0px !important;
+}
+.shadow-blur {
+    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.07) !important;
 }
