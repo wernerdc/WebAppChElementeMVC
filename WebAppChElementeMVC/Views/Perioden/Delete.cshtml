@@ -4,30 +4,36 @@
     ViewData["Title"] = "Delete";
 }
 
-<h1>Delete</h1>
-
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Periode</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nummer)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nummer)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-    </dl>
-    
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> 
-        <a class="btn btn-secondary" asp-action="Index">Back to List</a>
-    </form>
+<div class="mt-2 mx-n3 px-3">
+  <h4>Delete Periode</h4>
+  <h6 class="text-secondary mt-3">Are you sure you want to delete this?</h6>
 </div>
+
+<div class="pt-2">
+  <h6>Periode</h6>
+  <hr class="my-2">
+  <dl class="row">
+    <dt class="col-sm-2">
+      @Html.DisplayNameFor(model => model.Name)
+    </dt>
+    <dd class="col-sm-10 mb-0">
+      @Html.DisplayFor(model => model.Name)
+    </dd>
+    <dt class="col-sm-2">
+      @Html.DisplayNameFor(model => model.Nummer)
+    </dt>
+    <dd class="col-sm-10 mb-0">
+      @Html.DisplayFor(model => model.Nummer)
+    </dd>
+  </dl>
+
+  <form asp-action="Delete">
+    <div class="form-group d-flex">
+      <input type="hidden" asp-for="Id" />
+      <input type="submit" value="Delete" class="btn btn-danger me-3" />
+      <a asp-action="Index" class="btn btn-secondary me-2">Back to List</a>
+    </div>
+  </form>
+</div>
+
+

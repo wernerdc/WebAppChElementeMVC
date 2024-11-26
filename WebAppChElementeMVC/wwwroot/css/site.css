@@ -75,7 +75,7 @@ body {
 .btn.bg-gradient-primary:not(:disabled):not(.disabled).active,
 .btn.bg-gradient-primary:not(:disabled):not(.disabled):active,
 .show > .btn.bg-gradient-primary.dropdown-toggle {
-    color: color-(#318dba);
+    color: #318dba;
     background-color: #318dba;
 }
 

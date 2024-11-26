@@ -11,7 +11,7 @@
     <form asp-action="Edit">
       <div asp-validation-summary="ModelOnly" class="text-danger"></div>
       <input type="hidden" asp-for="Id" />
-      <div class="form-group mb-3">
+      <div class="form-group mb-3 col-md-6">
         <div class="input-group input-group-static">
           <label asp-for="Nummer">Nummer</label>
           <input asp-for="Nummer" class="form-control pt-0" placeholder="0" type="number">
@@ -19,7 +19,7 @@
         <span asp-validation-for="Nummer" class="text-danger text-xs"></span>
       </div>
       <div class="form-group d-flex">
-        <input type="submit" value="Save" class="btn btn-primary me-2" />
+        <input type="submit" value="Save" class="btn btn-primary me-3" />
         <a asp-action="Index" class="btn btn-secondary me-2">Back to List</a>
       </div>
     </form>
