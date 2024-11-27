@@ -30,6 +30,12 @@ body {
     border-bottom: 1px solid #848d95 !important;
 }
 
+hr {
+    color: #647c91;
+    opacity: 0.7;
+    height: 0.9px;
+}
+
 /* primary colors */
 .bg-gradient-primary { /*purple-blue dark*/
     background-image: linear-gradient(195deg, #40B4EC 0%, #8B1BD8 100%);
@@ -114,7 +120,7 @@ body {
 
 /* blur + transparency */ 
 .blur.card, .blur.card-body {
-    background-color: rgba(219, 228, 234, 0.5) !important;
+    background-color: rgba(219, 228, 234, 0.6) !important;
     -webkit-backdrop-filter: saturate(100%) blur(24px);
     backdrop-filter: saturate(100%) blur(24px);
 }
@@ -127,7 +133,8 @@ body {
 
 /*fix white border around card*/
 .card {
-     border: 0px !important;
+    border: 0px !important;
+    background-color: #efeae0;
 }
 .shadow-blur {
     box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.07) !important;
