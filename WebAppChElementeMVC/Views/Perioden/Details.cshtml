@@ -4,25 +4,25 @@
     ViewData["Title"] = "Details";
 }
 
-<div class="mt-2 mx-n3 px-3">
+<div class="mt-2">
   <h4>Periode Details</h4>
 </div>
 <div class="row pt-2 mx-n2">
   <div class="col-md-3 px-2 pb-3">
     <div class="card shadow p-2">
-      <h6>Periode</h6>
-      <hr class="mt-0 mb-2 mx-n2">
-      <dl class="row m-0">
-        <dt class="col-sm-8 ps-0">
+      <h6 class="px-2">Periode</h6>
+
+      <dl class="row m-0 px-2 pt-2">
+        <dt class="col-sm-8 ps-0 text-secondary">
           @Html.DisplayNameFor(model => model.Name)
         </dt>
-        <dd class="col-sm-4 pe-0">
+        <dd class="col-sm-4 pe-0 text-secondary">
           @Html.DisplayFor(model => model.Name)
         </dd>
-        <dt class="col-sm-8 ps-0">
+        <dt class="col-sm-8 ps-0 text-secondary">
           @Html.DisplayNameFor(model => model.Nummer)
         </dt>
-        <dd class="col-sm-4 mb-0 pe-0">
+        <dd class="col-sm-4 mb-0 pe-0 text-secondary">
           @Html.DisplayFor(model => model.Nummer)
         </dd>
       </dl>
@@ -31,17 +31,16 @@
   </div>
   <div class="col-md-9 px-2 pb-4">
     <div class="card shadow px-2 pt-2">
-      <h6>Elemente</h6>
-      <hr class="my-0 mx-n2">
+      <h6 class="px-2">Elemente</h6>
 
       <table class="table mb-0">
         <thead>
           <tr>
-            <th class="ps-2 text-secondary text-m font-weight-bolder opacity-7">Gruppe</th>
-            <th class="ps-2 text-secondary text-m font-weight-bolder opacity-7">Ordnungszahl</th>
-            <th class="ps-2 text-secondary text-m font-weight-bolder opacity-7">Symbol</th>
-            <th class="ps-2 text-secondary text-m font-weight-bolder opacity-7">Element</th>
-            <th class="ps-2 text-secondary text-m font-weight-bolder opacity-7">Zustand</th>
+            <th class="ps-2 text-secondary">Gruppe</th>
+            <th class="ps-2 text-secondary">Ordnungszahl</th>
+            <th class="ps-2 text-secondary">Symbol</th>
+            <th class="ps-2 text-secondary">Element</th>
+            <th class="ps-2 text-secondary">Zustand</th>
           </tr>
         </thead>
         <tbody>
