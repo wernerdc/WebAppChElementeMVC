@@ -4,34 +4,35 @@
     ViewData["Title"] = "Create";
 }
 
-<div class="mt-2 mx-n3 px-3">
+<div class="mt-3 mb-3">
   <h4>Create Periode</h4>
 </div>
-<div class="row pt-3">
-  <div class="col-md-6">
-    <form asp-action="Create">
-      <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-      <div class="form-group mb-3 col-md-6">
-        <div class="input-group input-group-static">
-          <label asp-for="Nummer">Nummer</label>
-          @* <input asp-for="Nummer" class="form-control pt-0" placeholder="0" type="number"> *@
-          <input asp-for="Nummer" class="form-control pt-0" type="number">
+<form asp-action="Create">
+  <div class="row mx-n2">
+    <div class="col-md-3 px-2 pb-3">
+      <div class="card shadow p-4">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+          <div class="input-group input-group-static">
+            <label asp-for="Nummer" class="text-xs">Nummer</label>
+            <input asp-for="Nummer" class="form-control pt-0" type="number">
+          </div>
+          <span asp-validation-for="Nummer" class="text-danger text-xs"></span>
         </div>
-        <span asp-validation-for="Nummer" class="text-danger text-xs"></span>
-      </div>
-        @* disabled, will be set by controller *@
+        @* disabled: will be set by controller *@
         @* <div class="form-group">
-             <label asp-for="Name" class="control-label"></label>
-             <input asp-for="Name" class="form-control" />
-             <span asp-validation-for="Name" class="text-danger"></span>
-           </div> *@
-      <div class="form-group d-flex">
-        <input type="submit" value="Create" class="btn btn-primary me-3" />
-        <a asp-action="Index" class="btn btn-secondary me-2">Back to List</a>
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+        </div> *@
       </div>
-    </form>
+    </div>
+    <div class="form-group d-flex pt-2 pb-3">
+      <input type="submit" value="Create" class="btn btn-primary me-2 mb-0" />
+      <a asp-action="Index" class="btn btn-secondary me-2 mb-0">Back to List</a>
+    </div>
   </div>
-</div>
+</form>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

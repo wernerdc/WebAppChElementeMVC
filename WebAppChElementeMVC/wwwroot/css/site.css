@@ -89,7 +89,15 @@ hr {
 .input-group.input-group-dynamic.is-focused label, .input-group.input-group-static.is-focused label {
     /*color: #0a8bca;*/
     color: #318dba;
-    /*font-weight: bolder;*/
+    /*font-weight: bold;*/
+    /*font-size: 1rem !important;
+    margin-top: 0;*/
+}
+
+label {
+    color: #90959a;
+    font-weight: 600;
+    padding-bottom: 0.25rem;
 }
 
 /*fix for selected input line right edge*/

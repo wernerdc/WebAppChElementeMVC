@@ -11,10 +11,10 @@
   <link rel="stylesheet" href="~/WebAppChElementeMVC.styles.css" asp-append-version="true" />
     
   <!-- Font Awesome Icons 
-  <link href="~/assets/fontawesome/css/solid.css" rel="stylesheet" />
   <link href="~/assets/fontawesome/css/all.css" rel="stylesheet" />
   -->
   <link href="~/assets/fontawesome/css/fontawesome.min.css" rel="stylesheet" />
+  <link href="~/assets/fontawesome/css/solid.css" rel="stylesheet" />
   <link href="~/assets/fontawesome/css/brands.css" rel="stylesheet" />
 
   <!-- Fonts and icons -->
@@ -56,6 +56,12 @@
             </button>
             <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
               <ul class="navbar-nav navbar-nav-hover ms-auto">
+                <li class="nav-item ms-lg-auto">
+                  <a class="nav-link nav-link-icon me-2" asp-area="" asp-controller="Elemente" asp-action="Index">
+                    <i class="fa-solid fa-atom me-1"></i>
+                    <p class="d-inline text-sm z-index-1 font-weight-semibold">Elemente</p>
+                  </a>
+                </li>
                 <li class="nav-item dropdown dropdown-hover mx-2">
                   <a class="nav-link ps-2 d-flex cursor-pointer align-items-center font-weight-semibold" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="material-symbols-rounded opacity-6 me-2 text-md">dashboard</i>
@@ -68,9 +74,7 @@
                       <h6 class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1">
                         Data Pages
                       </h6>
-                      <a class="dropdown-item border-radius-md" asp-area="" asp-controller="Elemente" asp-action="Index">
-                        <span>Elemente</span>
-                      </a>
+                      
                       <a class="dropdown-item border-radius-md" asp-area="" asp-controller="Gruppen" asp-action="Index">
                         <span>Gruppen</span>
                       </a>
@@ -89,9 +93,6 @@
                       <h6 class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1">
                         Data Pages
                       </h6>
-                      <a class="dropdown-item border-radius-md" asp-area="" asp-controller="Elemente" asp-action="Index">
-                        <span>Elemente</span>
-                      </a>
                       <a class="dropdown-item border-radius-md" asp-area="" asp-controller="Gruppen" asp-action="Index">
                         <span>Gruppen</span>
                       </a>
@@ -129,13 +130,13 @@
 
   <!-- content -->
   <header class="header-2">
-    <div class="page-header min-vh-50 relative" style="background-image: url('/assets/img/bg-chemical-ai.jpg')"> @* do not use the tile ~ here! slash / only for the root directory *@
+    <div class="page-header min-vh-50 relative" style="background-image: url('/assets/img/bg-chemical-ai.jpg')"> @* EXCEPTION: do not use the tilde ~ here! slash / only for the root directory *@
       <span class="mask bg-gradient-dark opacity-4"></span>
       <div class="container">
         <div class="row">
           <div class="col-lg-7 text-center mx-auto">
-            <h1 class="text-white font-weight-black pt-3 mt-n5">Material Kit 3</h1>
-            <p class="lead text-white mt-3">Free & Open Source Web UI Kit built over Bootstrap 5. <br /> Join over 1.6 million developers around the world. </p>
+            <h1 class="text-white pt-3 mt-n5 opacity-7">Material Kit 3</h1>
+            <p class="lead text-white mt-3 ">Free & Open Source Web UI Kit built over Bootstrap 5.</p>
           </div>
         </div>
       </div>

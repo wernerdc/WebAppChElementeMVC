@@ -4,54 +4,63 @@
     ViewData["Title"] = "Delete";
 }
 
-<h1>Delete</h1>
+<div class="mt-3">
+  <h4>Delete Element</h4>
+  <p class="mt-3 text-lg text-danger">Are you sure you want to delete this?</p>
+</div>
+<div class="row mx-n2">
+  <div class="col-md-4 px-2 pb-3">
+    <div class="card shadow p-3">
+      <h6>Element</h6>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Element</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
+      <dl class="row m-0 pt-2">
+        <dt class="col-md-6 px-0 text-secondary">
             @Html.DisplayNameFor(model => model.Ordnungszahl)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-md-6 px-0 text-secondary">
             @Html.DisplayFor(model => model.Ordnungszahl)
         </dd>
-        <dt class = "col-sm-2">
+        
+        <dt class="col-md-6 px-0 text-secondary">
             @Html.DisplayNameFor(model => model.Symbol)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-md-6 px-0 text-secondary">
             @Html.DisplayFor(model => model.Symbol)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-md-6 px-0 text-secondary">
             @Html.DisplayNameFor(model => model.Name)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-md-6 px-0 text-secondary">
             @Html.DisplayFor(model => model.Name)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-md-6 px-0 text-secondary">
             @Html.DisplayNameFor(model => model.Gruppe)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-md-6 px-0 text-secondary">
             @Html.DisplayFor(model => model.Gruppe.Id)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-md-6 px-0 text-secondary">
             @Html.DisplayNameFor(model => model.Periode)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-md-6 px-0 text-secondary">
             @Html.DisplayFor(model => model.Periode.Id)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-md-6 px-0 text-secondary">
             @Html.DisplayNameFor(model => model.Zustand)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-md-6 px-0 text-secondary">
             @Html.DisplayFor(model => model.Zustand.Id)
         </dd>
-    </dl>
-    
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
-    </form>
+      </dl>
+
+    </div>
+  </div>
+</div>
+   
+<div class="form-group d-flex pt-2 pb-3">
+  <form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <input type="submit" value="Delete" class="btn btn-danger me-2 mb-0" />
+    <a asp-action="Index" class="btn btn-secondary me-2 mb-0">Back to List</a>
+  </form>
 </div>
