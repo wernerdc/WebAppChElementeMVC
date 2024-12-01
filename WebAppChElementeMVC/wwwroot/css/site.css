@@ -94,6 +94,11 @@ hr {
     margin-top: 0;*/
 }
 
+.input-group select, .input-group input {
+    padding-left: 0.5rem !important;
+}
+
+
 label {
     color: #90959a;
     font-weight: 600;

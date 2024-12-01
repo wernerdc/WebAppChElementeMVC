@@ -48,7 +48,20 @@
           </div>
           <span asp-validation-for="GruppeId" class="text-danger text-xs"></span>
         </div>
-
+        @* <select class="form-control" name="choice-button" id="choice-button" placeholder="Language">
+          <option value="Choice 1" selected>Brazil</option>
+          <option value="Choice 2">Bucharest</option>
+          <option value="Choice 3">London</option>
+          <option value="Choice 4">Washington</option>
+        </select> *@
+        @* <!-- mandatory scripts --> *@
+        @* <script src="~/js/plugins/choices.min.js"></script> *@
+        @* <script>
+          if (document.getElementById("choice-button")) {
+            var element = document.getElementById("choice-button");
+            const example = new Choices(element, {});
+          }
+        </script> *@
         <div class="form-group pb-4">
           <div class="input-group input-group-static">
             <label asp-for="PeriodeId" class="text-xs">Periode</label>
